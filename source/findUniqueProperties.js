@@ -13,7 +13,7 @@
  */
 const findUniqueProperties = (obj1, obj2) => {
   const isPlainObject = v =>
-    v !== null && typeof v === 'object' && !Array.isArray(v);
+    v !== null && typeof v === "object" && v.constructor === Object;
 
   if (!isPlainObject(obj1) || !isPlainObject(obj2)) {
     throw new TypeError('Оба аргумента должны быть объектами');
